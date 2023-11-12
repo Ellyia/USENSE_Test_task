@@ -1,0 +1,23 @@
+<div>
+  <div class="grades">
+    Grades of password:
+    <span *ngIf="isShort()"> you need at least 8 characters</span>
+  </div>
+  <p
+    [class.red]="isShort() || checkStrength() === StrengthEnum.Easy"
+    [class.yellow]="checkStrength() === StrengthEnum.Medium"
+    [class.green]="checkStrength() === StrengthEnum.Strong">
+    Easy: has only letters / digits / symbols
+  </p>
+  <p
+    [class.red]="isShort()"
+    [class.yellow]="checkStrength() === StrengthEnum.Medium"
+    [class.green]="checkStrength() === StrengthEnum.Strong">
+    Medium: has combination of letters-symbols / letters-digits / digits-symbols
+  </p>
+  <p
+    [class.red]="isShort()"
+    [class.green]="checkStrength() === StrengthEnum.Strong">
+    Strong: has letters, symbols and numbers
+  </p>
+</div>
