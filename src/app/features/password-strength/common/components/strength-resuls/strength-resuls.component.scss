@@ -1,0 +1,44 @@
+@import '../../styles/common.scss';
+
+$primary-padding: 15px;
+$primary-margin: 15px;
+$primary-fontsize: 16px;
+$primary-lightcolor: #fff;
+
+@mixin bg-color($bg-color, $color: $primary-darkcolor) {
+  background-color: $bg-color;
+  color: $color;
+}
+
+p {
+  @include bg-color(#bdb8b8, $primary-lightcolor);
+  @include border-shadow(3px, #d1d0d0);
+  font-size: $primary-fontsize;
+  padding: $primary-padding;
+
+  &:not(:last-child) {
+    margin-bottom: $primary-margin;
+  }
+}
+
+.grades {
+  font-size: $primary-fontsize;
+  margin-bottom: $primary-margin;
+  color: $primary-darkcolor;
+
+  span {
+    color: #ff0000;
+  }
+}
+
+.red {
+  @include bg-color(#e76363, $primary-lightcolor);
+}
+
+.yellow {
+  @include bg-color(#f5f599, $primary-darkcolor);
+}
+
+.green {
+  @include bg-color(#6ebb6e, $primary-lightcolor);
+}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { StrengthResulsComponent } from './components/strength-resuls/strength-resuls.component';
+import { StrengthResulsComponent } from './common/components/strength-resuls/strength-resuls.component';
 
 @Component({
   selector: 'app-password-strength',
